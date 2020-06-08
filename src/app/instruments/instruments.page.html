@@ -1,0 +1,35 @@
+<ion-app>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>INFORMACION SOBRE<br>LOS INSTRUMENTOS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+   <ion-item *ngFor="let instrument of instruments" routerLink={{instrument.route}}>
+    <ion-avatar slot="start">
+      <ion-img 
+      [src]="instrument.imgSrc">
+      </ion-img>
+    </ion-avatar>
+    <ion-label>{{instrument.name}}
+      </ion-label>
+   </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button
+    expand="full"
+    color="warning"
+    class="ion-padding-horizontal"
+    routerLink="/home">
+    HOME
+    </ion-button>
+  </ion-toolbar>
+</ion-footer> 
+
+</ion-app>
